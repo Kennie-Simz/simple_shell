@@ -454,7 +454,7 @@ Simple shell 1.0 +
 - - -
 
 ## Known Bugs
-Not yet found.
+There are a number of bugs starting from task 0.
 
 ### Collaborate
 
