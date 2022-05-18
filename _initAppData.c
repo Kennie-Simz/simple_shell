@@ -2,6 +2,7 @@
 
 /**
  * _initData - init data structure
+ * @prmArgv: pointer to pointer to
  *
  * Return: data structure
  */
