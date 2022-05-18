@@ -423,6 +423,25 @@ $ exit
 julien@ubuntu:~/shell$ 
 ```
 
+- - -
+
+**15. Comments**
+---
+Simple shell 1.0 +
+
+*   Handle comments (`#`)
+
+```
+julien@ubuntu:~/shell$ sh
+$ echo $$ # ls -la
+5114
+$ exit
+julien@ubuntu:~/shell$ 
+```
+
+- - -
+
+
 ## Known Bugs
 Not yet found.
 
