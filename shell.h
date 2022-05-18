@@ -25,6 +25,7 @@ extern char **environ;
  * @name: environment name
  * @value: environment value
  * @next: points to the next node
+ * @global: pointer to usr/bin PATH
  */
 typedef struct environment_s
 {
@@ -39,7 +40,11 @@ typedef struct environment_s
  *
  * @arguments: argument's array
  * @buffer: buffer
- * @command: command name
+ * @commandName: command name
+ * @commandList: command list
+ * @history: array history
+ * @programName: program name
+ * @env: pointer to env variable
  */
 typedef struct appData_s
 {
@@ -55,9 +60,9 @@ typedef struct appData_s
 /**
  * struct errorMessage_s - An structure for each error message
  *
- * @ecode: error code
+ * @code: error code
  * @msg: pointer to error message
- * @size: error message length.
+ *
  */
 typedef struct errorMessage_s
 {
@@ -68,7 +73,7 @@ typedef struct errorMessage_s
 /**
  * struct customCommand_s - struct conversion to function
  *
- * @command: flag string
+ * @commandName: flag string
  * @func: pointer to func
  */
 typedef struct customCommand_s
