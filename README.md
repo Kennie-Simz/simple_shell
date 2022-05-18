@@ -258,6 +258,12 @@ You don’t have to:
 
 *   Be able to move the cursor.
 
+**7. Simple shell 0.2.1**
+---
+Simple shell 0.2 +
+
+*   You are not allowed to use `strtok`.
+
 ## Known Bugs
 Not yet found.
 
