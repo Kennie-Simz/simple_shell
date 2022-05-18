@@ -245,6 +245,8 @@ $ exit
 julien@ubuntu:~/shell$ 
 ```
 
+- - -
+
 **6. Simple shell 0.1.1**
 ---
 Simple shell 0.1 +
@@ -258,11 +260,15 @@ You don’t have to:
 
 *   Be able to move the cursor.
 
+- - -
+
 **7. Simple shell 0.2.1**
 ---
 Simple shell 0.2 +
 
 *   You are not allowed to use `strtok`.
+
+- - -
 
 **8. Simple shell 0.4.1**
 ---
@@ -278,6 +284,9 @@ julien@ubuntu:~/shell$ echo $?
 98
 julien@ubuntu:~/shell$ 
 ```
+
+- - -
+
 **9. setenv, unsetenv**
 ---
 Simple shell 1.0 +
@@ -293,6 +302,8 @@ Implement the `setenv` and `unsetenv` builtin commands:
     *   Command syntax: `unsetenv VARIABLE`.
     *   Should print something on stderr on failure.
 
+- - -
+
 **10. cd**
 ---
 Simple shell 1.0 +
@@ -306,6 +317,34 @@ Implement the builtin command `cd`:
 *   You have to update the environment variable `PWD` when you change directory.
 
 `man chdir`, `man getcwd`
+
+- - -
+
+**11. ;**
+---
+Simple shell 1.0 +
+
+*   Handle the commands separator `;`.
+
+```
+alex@~$ ls /var ; ls /var
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$ ls /hbtn ; ls /var
+ls: cannot access /hbtn: No such file or directory
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$ ls /var ; ls /hbtn
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+ls: cannot access /hbtn: No such file or directory
+alex@~$ ls /var ; ls /hbtn ; ls /var ; ls /var
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+ls: cannot access /hbtn: No such file or directory
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+backups  cache  crash  lib  local  lock  log  mail  metrics  opt  run  spool  tmp
+alex@~$
+```
+
+- - -
 
 
 ## Known Bugs
